@@ -1,0 +1,18 @@
+Optional: using the official Bootstrap 5 build
+==============================================
+
+The application already works completely offline with the bundled
+assets/vendor/bootstrap-lite/ files, which implement the Bootstrap 5
+class names and behaviours used by this project.
+
+If you would rather ship the official library, download Bootstrap 5
+(https://getbootstrap.com/docs/5.3/getting-started/download/ - do this
+once, on a machine with internet) and copy exactly two files into THIS
+folder:
+
+    bootstrap.min.css          (from the download: dist/css/bootstrap.min.css)
+    bootstrap.bundle.min.js    (from the download: dist/js/bootstrap.bundle.min.js)
+
+includes/header.php checks for those two files with is_file() and loads
+them instead of the bundled ones. No code change is needed, and the
+application still runs 100% offline because the files are local.
